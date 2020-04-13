@@ -27,6 +27,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 #
+gem 'devise'
+gem 'milia'
+gem 'devise-bootstrap-views'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 
 
 # Use ActiveStorage variant
@@ -67,3 +72,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
