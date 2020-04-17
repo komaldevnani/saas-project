@@ -23,17 +23,20 @@
   </div>
 
   <%= fields_for( :tenant ) do |w| %>
-    <div class="form-group col-md-6 no-left-padding">
+    <div class="row">
+    <div class="form-group col-sm-8 no-left-padding">
       <%= w.label :name, 'Organization' %>
       <span class='description'>(Unique name for your group or organization for the new account)</span>
       <%= w.text_field :name, required: true, class: "form-control" %>
     </div>
 
-    <div class="form-group col-md-6 no-right-padding">
+    <div class="form-group col-sm-4 no-right-padding">
       <%= w.label :plan %>
       <%= w.select :plan, options_for_select(Plan.options, params[:plan]),{}, required: true, class: "form-control" %>
     </div>
+    </div>
   <% end %>
+
 
   <div class="form-group">
     <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
