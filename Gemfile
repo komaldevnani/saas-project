@@ -33,6 +33,7 @@ gem 'devise-bootstrap-views'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'bootstrap-datepicker-rails'
 
 
 # Use ActiveStorage variant
