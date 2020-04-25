@@ -1,5 +1,6 @@
 class Tenant < ApplicationRecord
-
+  has_one :payment
+  accepts_nested_attributes_for :payment
   acts_as_universal_and_determines_tenant
   has_many :members, dependent: :destroy
   validates_presence_of :name

@@ -34,7 +34,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap-datepicker-rails'
-
+gem 'stripe'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
