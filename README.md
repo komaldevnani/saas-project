@@ -1,25 +1,60 @@
-# README
+# Software as a service (SaaS)
 
-#### TODO: AWS set up for uploads
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This SaaS application implements multi tenanting feature. Organisations can invite people to their project and contribute to it remotely.
+ 
 
-Things you may want to cover:
+## Requirements
+ ruby version 2.6.3
+  
+ rails 6.0.2 and above
+ 
+## Setup
 
-* Ruby version
+* Regenerate master key
+ 
+  * Remove config/credentials.yml.enc
+ 
+  * Run ````EDITOR=vim rails credentials:edit```` in the terminal: This command will create a new master.key and credentials.yml.enc if they do not exist.
+ 
+   * Paste the your sendGrid and Stripe api keys in the new credentials file (and save + quit vim)
 
-* System dependencies
+* Run command ````bundle install --without production```` for all gem dependencies
 
-* Configuration
+* For databases run
 
-* Database creation
+  ````rails db:create db:migrate````
 
-* Database initialization
+* Now run ````rails s```` and navigate to ``localhost:3000`` in your browser.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Features
 
-* Deployment instructions
+* Organisation can have one or many projects according to the plan selected(free or premium)
 
-* ...
+* Upload your project and access anytime. (todo) 
+
+* Add users to your organisation
+  * Add members to project
+  
+* Change plan anytime
+  * Free plan : One project
+  * Premium Plan : Unlimited projects
+  
+## Screenshots
+
+![Home page]()
+
+![Projects]()
+
+![Add users to project]()
+
+
+#### TODO: 
+* AWS set up for uploads
+* sendGrid add-on on heroku 
+
+
+
+
+
+
